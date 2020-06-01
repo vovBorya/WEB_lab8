@@ -1,4 +1,4 @@
-let gameImgDir = "img/";
+let gameImgDir = "./src/img/";
 let gTexts = []; // Для многоязычности.
 
 gTexts['win1'] = 'Win ';
@@ -26,7 +26,7 @@ const createField = (w, h) => { // Задаёт размер игрового п
 
 const setCell = (x, y, t) => { // Поставить крестик или нолик
   gField[x][y] = t; // Запомнить t в массиве
-  let imgSrc = gameImgDir + 'c_null.gif'; // изображение по умолчанию
+  let imgSrc = gameImgDir + 'c_null.png'; // изображение по умолчанию
   if (t === 'x') imgSrc = gameImgDir + 'x.png'; // картинка для крестика
   if (t === 'o') imgSrc = gameImgDir + 'o.png'; // картинка для нолика
   let oName = "c" + x + "_" + y; // составление имени картинки
@@ -159,6 +159,7 @@ const clearField = () => {
 }
 
 const initGame = () => { // инициализация игры
+  console.log('initGame')
   let n = 4;
   createField(n, n); // создание игрового поля
 }
