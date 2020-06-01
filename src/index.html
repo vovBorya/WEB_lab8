@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="index.css"> <!-- Подключение стилей -->
+  <link rel="stylesheet" href="">
+
+</head>
+<body onload="initGame()">
+
+  <!-- Заголовок -->
+  <h2 id="header-title">Для регистрации необходимо указать ваши персональные данные</h2>
+
+  <!-- Форма регистрации -->
+  <form action="/" method="post" id="registration-form">
+    <div class="horizontal-container"> <!-- Контейнер для горизонтального позиционирования -->
+      <div id="fields">
+        <div>
+          <!-- Ввод имени -->
+          <label class="required" for="name">Имя: </label><input id="name" type="text" name="name" required/>
+        </div>
+        <div>
+          <!-- Ввод адреса -->
+          <label class="required" for="address">Адрес: </label><input id="address" type="text" name="address"/>
+        </div>
+        <div>
+          <!-- Ввод компании -->
+          <label class="required" for="company">Компания: </label><input id="company" type="text" name="company"/>
+        </div>
+        <div>
+          <!-- Ввод телефона -->
+          <label class="required" for="phone">Телефон: </label><input id="phone" type="tel" name="phone"/>
+        </div>
+        <div>
+          <!-- Ввод эл. почты -->
+          <label class="required" for="email">Эл. почта: </label><input id="email" type="email" name="email"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="horizontal-container"> <!-- Контейнер для горизонтального позиционирования -->
+
+      <!-- Кнопка, инициирующая проверку ввода и отправку данных в случае успеха -->
+      <button type="submit" onclick="return checkData()">Отправить</button>
+
+      <!-- Кнопка очистки данных в форме -->
+      <button type="reset">Очистить</button>
+    </div>
+  </form>
+
+  <p id="required-fields-explanation" class="required">Поля, обязательные для заполнения</p>
+  <br><br><br><br>
+  <div id="game"></div>
+  <script src="./index.js"></script> <!-- Подключение скрипта -->
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+#header-title {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input {
+    margin-left: 10px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.required:before {
+    color: red;
+    content: "* ";
+}
+
+/* Блок содержимого */
+.horizontal-container {
+    padding-top: 40px;
+    justify-content: center;
+    display: flex; /* Для горизонтального позиционирования колонок */
+}
+
+button {
+    margin: 10px;
+}
+
+#required-fields-explanation {
+    padding-top: 40px;
+}
+
+#game {
+    display: flex;
+    justify-content: center
+}
+
