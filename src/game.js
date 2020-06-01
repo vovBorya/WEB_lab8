@@ -157,11 +157,8 @@ function onCellClk(x, y) { // Действия при клике по клетк
   }
 }
 
-
-console.log('initGame')
 let n = 4;
 createField(n, n);
 function initGame() { // инициализация игры
-  console.log('initGame2')
   createField(n, n); // создание игрового поля
 }
